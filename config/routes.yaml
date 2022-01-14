@@ -2,6 +2,10 @@ controllers:
     resource: ../src/Controller/
     type: annotation
 
+hello_world:
+    path: /hello-world
+    controller: App\Controller\HelloController::hello
+
 kernel:
     resource: ../src/Kernel.php
     type: annotation
