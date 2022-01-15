@@ -22,3 +22,30 @@ services:
     depends_on:
       - php
       
+
+###> doctrine/doctrine-bundle ###
+  database:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=symfony
+      - MYSQL_USER=symfony
+      - MYSQL_PASSWORD=symfony
+    tty: true
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./.docker/dbdata:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    links:
+      - database
+    environment:
+      PMA_HOST: database
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+      restart: always
+    ports:
+      - "8082:80"

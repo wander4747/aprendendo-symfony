@@ -27,6 +27,8 @@ composer require annotations
 
 ### Twig
 
+Instalação do Twig
+
 ```sh
 composer require twig
 ```
@@ -38,4 +40,38 @@ Crie um controller retornando o método:
 ...
 $name = "Fulano";
 return $this->render("home/index.html.twig", ['name' => $name]);
+```
+
+### Doctrine
+
+Instalação do Doctrine
+
+```sh 
+composer require symfony/orm-pack
+```
+
+```sh 
+composer require --dev symfony/maker-bundle
+```
+
+#### Criar banco de dados com Doctrine
+```sh 
+php bin/console doctrine:database:create
+```
+
+#### Criar entidade
+```sh 
+php bin/console make:entity EntityName  
+```
+
+#### Criar migration
+```sh 
+php bin/console doctrine:migrations:diff
+```
+
+Ao criar um migration é criado um arquivo dentro da pasta `migrations`
+
+Rodar o migration criado
+```sh 
+php bin/console doctrine:migrations:migrate
 ```
