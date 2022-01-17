@@ -75,3 +75,11 @@ Rodar o migration criado
 ```sh 
 php bin/console doctrine:migrations:migrate
 ```
+
+### Forms e Validator
+
+Instalação do Forms e Validator
+
+```sh 
+composer require  symfony/validator symfony/form
+```

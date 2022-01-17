@@ -16,6 +16,7 @@ class ProductRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
+        $this->model = new Product();
         parent::__construct($registry, Product::class);
     }
 
