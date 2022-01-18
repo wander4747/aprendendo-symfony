@@ -1,5 +1,13 @@
 # Aprendendo Symfony
 
+### Aplicação feita
+
+Um simples CRUD de produtos com alguns conceitos básicos do Symfony.
+http://localhost:8099/product/
+
+![video](https://user-images.githubusercontent.com/6461792/150030213-91bce995-c616-428c-b721-d9e85f1e6f17.gif)
+
+
 ### Criando primeira página
 
 - Criar um controller dentro de `src/Controller/`

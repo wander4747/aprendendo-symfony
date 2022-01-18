@@ -11,6 +11,11 @@
         </div>
     </div>
 
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success mt-4">
+            {{ message }}
+        </div>
+    {% endfor %}
     <table class="table table-striped table-hover mt-2">
         <thead>
             <tr>
@@ -25,7 +30,7 @@
             <tr>
                 <td>{{ product.id }}</td>
                 <td>{{ product.name }}</td>
-                <td>{{ product.price }}</td>
+                <td>{{ product.price|number_format(2, ",", ".") }}</td>
                 <td>
                     <a href="{{ path('product_show', {'id': product.id}) }}">mostrar</a>
                     <a href="{{ path('product_edit', {'id': product.id}) }}">editar</a>

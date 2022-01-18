@@ -17,15 +17,15 @@ class Product
 
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Assert\NotBlank]
+    #[Assert\NotBlank(message: "Nome obrigatório" )]
     private $name;
 
     #[ORM\Column(type: 'decimal', scale: 2)]
-    #[Assert\NotBlank]
+    #[Assert\NotBlank(message: "Preço obrigatório" )]
     private $price;
 
     #[ORM\Column(type: 'text')]
-    #[Assert\NotBlank]
+    #[Assert\NotBlank(message: "Descrição obrigatório" )]
     private $description;
 
     /**
