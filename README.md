@@ -3,7 +3,10 @@
 ### Aplicação feita
 
 Um simples CRUD de produtos com alguns conceitos básicos do Symfony.
-http://localhost:8099/product/
+
+[site](http://localhost:8099/product/)
+
+[phpadmin](http://localhost:8082/)
 
 ![video](https://user-images.githubusercontent.com/6461792/150030213-91bce995-c616-428c-b721-d9e85f1e6f17.gif)
 
